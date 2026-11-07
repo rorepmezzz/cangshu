@@ -956,7 +956,7 @@ $("wipe").addEventListener("click", () => {
 function showView(name) {
   ["setup", "weights", "feeding", "settings"].forEach((v) => { $("view-" + v).hidden = v !== name; });
   document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.view === name)));
-  const sub = { setup: "回答几个问题，生成你的减重记录器", weights: "抱猫上秤，借人称猫", feeding: $("hull-sub").dataset.feeding || "喂粮建议", settings: "设置与备份" };
+  const sub = { setup: "回答几个问题，就开始称猫吧", weights: "抱猫上秤，借人称猫", feeding: $("hull-sub").dataset.feeding || "喂粮建议", settings: "设置与备份" };
   $("hull-sub").textContent = sub[name];
   window.scrollTo(0, 0);
 }
